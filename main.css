@@ -21,7 +21,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #8ba9d0;
+  background-color: #888888;
 }
 
 li {
@@ -64,13 +64,13 @@ input {
 .gruppe {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content:space-evenly;
   align-items: center;
 }
 
 table, th, td {
   border: 1px solid black;
-  width: 100%;
   border-collapse: collapse;
+  width: 100%;
   padding: 0.5em;
 }
