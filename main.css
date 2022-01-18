@@ -60,3 +60,17 @@ input {
   background-color: #007AF3;
   color: white;
 }
+
+.gruppe {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+table, th, td {
+  border: 1px solid black;
+  width: 100%;
+  border-collapse: collapse;
+  padding: 0.5em;
+}
