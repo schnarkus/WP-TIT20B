@@ -16,6 +16,7 @@ img {
 }
 
 ul {
+  border-radius: 10px;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -28,6 +29,7 @@ li {
 }
 
 li a {
+  border-radius: 10px;
   display: block;
   color: white;
   text-align: center;
@@ -37,6 +39,16 @@ li a {
 
 li a:hover {
   background-color: black;
+}
+
+fieldset {
+  border-radius: 10px;
+}
+
+input {
+  border-radius: 10px;
+  font-family: inherit;
+  padding: 0.2em;
 }
 
 .button {
