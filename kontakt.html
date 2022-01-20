@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css"/>
-    <title>Kontakt</title>
+    <title>Kontakt</title> <!-- Bearbeitet von Markus Simianer -->
 </head>
 <body>
+<div class="navbar">
 <ul> 
   <li><a href="index.html">Startseite</a></li>
   <li><a href="monitore.html">Monitore</a></li>
@@ -17,15 +18,16 @@
   <li><a href="kontakt.html">Kontakt</a></li>
   <li><a href="impressum.html">Impressum</a></li>
 </ul>
+</div>
 <br>
 <fieldset>
-<legend>Feedback</legend>
+<legend><b>Feedback</b></legend>
 <form>
     <label for="lname">Name:</label>
     <input type="text" id="iname" name="iname">
     <label for="lmail">E-Mail:</label>
-    <input type="text" id="imail" name="imail"><br><br>
-    <input type="text" id="itext" name="itext" width=500 height=500>
+    <input type="email" id="imail" name="imail"><br><br>
+    <input type="text" id="itext" name="itext">
     <button type="button" class="button">Senden</button>
 </form>
 </fieldset>     

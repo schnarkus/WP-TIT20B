@@ -1,3 +1,4 @@
+/* Bearbeitet von Markus Simianer */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 :root {
   --primary-color: #007AF3;
@@ -61,7 +62,7 @@ input {
   color: white;
 }
 
-.gruppe {
+.flex {
   display: flex;
   flex-direction: row;
   justify-content:space-evenly;
