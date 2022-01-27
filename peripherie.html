@@ -1,90 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
     <title>Peripherie</title>
-</head>
-<body>
-  <ul class="navbar"> 
-        <li><a href="index.html">Startseite</a></li>
-        <li><a href="monitore.html">Monitore</a></li>
-        <li><a href="grafikkarten.html">Grafikkarten</a></li>
-        <li><a href="prozessoren.html">Prozessoren</a></li>
-        <li><a href="peripherie.html">Peripherie</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <li><a href="impressum.html">Impressum</a></li>
-    </ul>
-    <br>
-    <h1>Peripherie</h1>
-    <p>Hier finden Sie eine Übersicht über die Bestseller im Bereich Mäuse und Tastaturen.</p>
-    <fieldset>
-        <legend><b>Tastaturen: Bestseller</b></legend>
-            <table class="producttable">
-                <tr>
-                  <th>Name</th>
-                  <th>Bild</th>
-                  <th>Anschluss</th>
-                  <th>Gewicht</th>
-                  <th>Preis</th>
-                </tr>
-                <tr>
-                  <td><a href="https://www.notebooksbilliger.de/sharkoon+skiller+mech+sgk30+699498?nbbct=4001_geizhals">Sharkoon Skiller Mech SGK30</a></td>
-                  <td><img height="100" src="https://media.nbb-cdn.de/images/products/690000/699498/SKILLER_SGK30_DE_01.jpg?size=2800"/></td>
-                  <td>USB, kabelgebunden</td>
-                  <td>867g</td>
-                  <td>44,39€</td>
-                </tr>
-                <tr>
-                  <td><a href="https://www.mindfactory.de/product_info.php/Logitech-G413-Omron-Romer-G-Tactile-USB-Deutsch-Carbon--kabelgebunden-_1188942.html">Logitech G413 Carbon</a></td>
-                  <td><img height="100" src="https://image1280.macovi.de/images/product_images/1280/1188942_0__70285.jpg"/></td>
-                  <td>USB, kabelgebunden</td>
-                  <td>1105g</td>
-                  <td>72,96€</td>
-                </tr>
-                <tr>
-                  <td><a href="https://www.mindfactory.de/product_info.php/Corsair-Gaming-K70-RGB-MK-2-Rapidfire-CHERRY-MX-Low-Profile-RGB-Speed-U_1285877.html">Corsair Gaming K70 RGB MK.2 Rapidfire CHERRY MX</a></td>
-                  <td><img height="100" src="https://image1280.macovi.de/images/product_images/1280/1285877_2__8897585-2.jpg"/></td>
-                  <td>USB, kabelgebunden</td>
-                  <td>1250g</td>
-                  <td>148,97€</td>
-                </tr>
-              </table>
-              <br>
-              <br>
-              <legend><b>Computermäuse: Bestseller</b></legend>
-            <table class="producttable">
-                <tr>
-                  <th>Name</th>
-                  <th>Bild</th>
-                  <th>Anschluss</th>
-                  <th>Tastenanzahl</th>
-                  <th>Preis</th>
-                </tr>
-                <tr>
-                  <td><a href="https://www.caseking.de/hyperx-pulsefire-fps-pro-rgb-gaming-maus-schwarz-gamo-892.html?sPartner=185&utm_source=geizhals&utm_medium=comparison&utm_campaign=Peripherie+%3E+Eingabeger%C3%A4te+%3E+M%C3%A4use&campaign=psm/geizhals&wt_mc=preisvergleich.geizhals.feed">Pulsefire FPS Pro RGB</a></td>
-                  <td><img height="100" src="https://static3.caseking.de/media/image/thumbnail/gamo-892_gamo_892_01_800x800.jpg"/></td>
-                  <td>USB, kabelgebunden</td>
-                  <td>6 Tasten</td>
-                  <td>39,90€</td>
-                </tr>
-                <tr>
-                  <td><a href="https://www.x-kom.de/corsair-sabre-pro-rgb-ch-9303111-eu-gaming-maus-640411?utm_source=geizhals">CORSAIR Sabre Pro RGB</a></td>
-                  <td><img height="100" src="https://www.x-kom.de/media/image/product/318607/md/corsair-sabre-pro-rgb-ch-9303111-eu-gaming-maus-640411.jpg"/></td>
-                  <td>USB, kabelgebunden</td>
-                  <td>6 Tasten</td>
-                  <td>47,90€</td>
-                </tr>
-                <tr>
-                  <td><a href="https://www.mindfactory.de/product_info.php/Logitech-G-Pro-X-Superlight-2-4-GHz-und-USB-schwarz--kabellos-_1411203.html">Logitech G Pro X Superlight</a></td>
-                  <td><img height="100" src="https://image1280.macovi.de/images/product_images/1280/1411203_3__9017556-3.jpg"/></td>
-                  <td>USB, kabellos</td>
-                  <td>5 Tasten</td>
-                  <td>107,95€</td>
-                </tr>
-              </table>
+  </head>
+  <body>
+    <header>
+      <div class="topnav" id="myTopnav">
+        <a href="index.html">Startseite</a>
+        <a href="monitore.html">Monitore</a>
+        <a href="grafikkarten.html">Grafikkarten</a>
+        <a href="prozessoren.html">Prozessoren</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"
+          ><i class="fa fa-bars"></i
+        ></a>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <h1>Peripherie</h1>
+        <p>
+          Hier finden Sie eine Übersicht über die Bestseller im Bereich Mäuse
+          und Tastaturen.
+        </p>
+        <fieldset>
+          <legend><b>Tastaturen: Bestseller</b></legend>
+          <table class="producttable">
+            <tr>
+              <th>Name</th>
+              <th>Bild</th>
+              <th>Anschluss</th>
+              <th>Gewicht</th>
+              <th>Preis</th>
+            </tr>
+            <tr>
+              <td>
+                <a
+                  href="https://www.notebooksbilliger.de/sharkoon+skiller+mech+sgk30+699498?nbbct=4001_geizhals"
+                  >Sharkoon Skiller Mech SGK30</a
+                >
+              </td>
+              <td>
+                <img
+                  height="100"
+                  src="https://media.nbb-cdn.de/images/products/690000/699498/SKILLER_SGK30_DE_01.jpg?size=2800"
+                />
+              </td>
+              <td>USB, kabelgebunden</td>
+              <td>867g</td>
+              <td>44,39€</td>
+            </tr>
+            <tr>
+              <td>
+                <a
+                  href="https://www.mindfactory.de/product_info.php/Logitech-G413-Omron-Romer-G-Tactile-USB-Deutsch-Carbon--kabelgebunden-_1188942.html"
+                  >Logitech G413 Carbon</a
+                >
+              </td>
+              <td>
+                <img
+                  height="100"
+                  src="https://image1280.macovi.de/images/product_images/1280/1188942_0__70285.jpg"
+                />
+              </td>
+              <td>USB, kabelgebunden</td>
+              <td>1105g</td>
+              <td>72,96€</td>
+            </tr>
+            <tr>
+              <td>
+                <a
+                  href="https://www.mindfactory.de/product_info.php/Corsair-Gaming-K70-RGB-MK-2-Rapidfire-CHERRY-MX-Low-Profile-RGB-Speed-U_1285877.html"
+                  >Corsair Gaming K70 RGB MK.2 Rapidfire CHERRY MX</a
+                >
+              </td>
+              <td>
+                <img
+                  height="100"
+                  src="https://image1280.macovi.de/images/product_images/1280/1285877_2__8897585-2.jpg"
+                />
+              </td>
+              <td>USB, kabelgebunden</td>
+              <td>1250g</td>
+              <td>148,97€</td>
+            </tr>
+          </table>
+          <br />
+          <br />
+          <legend><b>Computermäuse: Bestseller</b></legend>
+          <table class="producttable">
+            <tr>
+              <th>Name</th>
+              <th>Bild</th>
+              <th>Anschluss</th>
+              <th>Tastenanzahl</th>
+              <th>Preis</th>
+            </tr>
+            <tr>
+              <td>
+                <a
+                  href="https://www.caseking.de/hyperx-pulsefire-fps-pro-rgb-gaming-maus-schwarz-gamo-892.html?sPartner=185&utm_source=geizhals&utm_medium=comparison&utm_campaign=Peripherie+%3E+Eingabeger%C3%A4te+%3E+M%C3%A4use&campaign=psm/geizhals&wt_mc=preisvergleich.geizhals.feed"
+                  >Pulsefire FPS Pro RGB</a
+                >
+              </td>
+              <td>
+                <img
+                  height="100"
+                  src="https://static3.caseking.de/media/image/thumbnail/gamo-892_gamo_892_01_800x800.jpg"
+                />
+              </td>
+              <td>USB, kabelgebunden</td>
+              <td>6 Tasten</td>
+              <td>39,90€</td>
+            </tr>
+            <tr>
+              <td>
+                <a
+                  href="https://www.x-kom.de/corsair-sabre-pro-rgb-ch-9303111-eu-gaming-maus-640411?utm_source=geizhals"
+                  >CORSAIR Sabre Pro RGB</a
+                >
+              </td>
+              <td>
+                <img
+                  height="100"
+                  src="https://www.x-kom.de/media/image/product/318607/md/corsair-sabre-pro-rgb-ch-9303111-eu-gaming-maus-640411.jpg"
+                />
+              </td>
+              <td>USB, kabelgebunden</td>
+              <td>6 Tasten</td>
+              <td>47,90€</td>
+            </tr>
+            <tr>
+              <td>
+                <a
+                  href="https://www.mindfactory.de/product_info.php/Logitech-G-Pro-X-Superlight-2-4-GHz-und-USB-schwarz--kabellos-_1411203.html"
+                  >Logitech G Pro X Superlight</a
+                >
+              </td>
+              <td>
+                <img
+                  height="100"
+                  src="https://image1280.macovi.de/images/product_images/1280/1411203_3__9017556-3.jpg"
+                />
+              </td>
+              <td>USB, kabellos</td>
+              <td>5 Tasten</td>
+              <td>107,95€</td>
+            </tr>
+          </table>
         </fieldset>
-</body>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>
+          <a href="peripherie.html">Peripherie</a>
+          <a href="kontakt.html">Kontakt</a>
+          <a href="impressum.html">Impressum</a>
+        </p>
+        <p>© 2022 HardwareVergleich46</p>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
 </html>
