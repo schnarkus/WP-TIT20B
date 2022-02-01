@@ -11,20 +11,49 @@ body {
   color: #007af3;
 }
 
-.container {
-  margin-inline: auto;
-  width: min(90%, 70.5rem);
-}
-
 .flex {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
   align-items: center;
 }
 
-.grid {
+.item1 {
+  grid-area: header;
+}
+.item2 {
+  grid-area: menu;
+}
+.item3 {
+  grid-area: main;
+}
+.item4 {
+  grid-area: main2;
+}
+.item5 {
+  grid-area: footer;
+}
+
+.grid-container {
   display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "main main main main main main"
+    "main2 main2 main2 main2 main2 main2"
+    "footer footer footer footer footer footer";
+  grid-gap: 1rem;
+  background-color: white;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 1rem;
 }
 
 .topnav {
@@ -39,9 +68,9 @@ body {
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 1rem 1rem;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1rem;
 }
 
 .topnav a:hover {
@@ -88,6 +117,10 @@ fieldset {
   border-radius: 1rem;
 }
 
+.centered {
+  margin: auto;
+}
+
 input {
   border-radius: 1rem;
   font-family: inherit;
@@ -104,18 +137,94 @@ input {
   color: white;
 }
 
-table,
-th,
-td {
-  border: 0.1rem solid black;
+table {
   border-collapse: collapse;
-  width: 100%;
-  padding: 0.5rem;
+}
+td,
+th {
+  padding: 1em;
+}
+th:first-child {
+  padding-left: 0.5em;
+}
+th:last-child,
+td:last-child {
+  padding-right: 0.5em;
+}
+thead th {
+  border-bottom: medium solid lightblue;
+}
+tbody th {
+  font-weight: normal;
+  text-align: left;
+}
+th a {
+  background: url(pdf.png) no-repeat left center;
+  padding: 15px 5px 15px 40px;
+}
+td {
+  text-align: center;
+}
+td:nth-child(3) {
+  text-align: right;
+}
+td:nth-child(4) {
+  color: #007af3;
+}
+td.paid {
+  color: green;
+  font-weight: normal;
 }
 
-.producttable td,
-tr,
-th {
-  text-align: center;
-  white-space: nowrap;
+@media screen and (max-width: 42em) {
+  table,
+  tbody,
+  tr {
+    display: block;
+  }
+  thead {
+    display: none;
+  }
+  tr:first-child {
+    border-top: medium solid lightblue;
+  }
+  tr {
+    border-bottom: medium solid lightblue;
+    padding: 0.5em 2em 1em;
+  }
+
+  tbody th {
+    display: block;
+    font-weight: bold;
+  }
+  th a {
+    font-weight: normal;
+  }
+  td {
+    display: inline-block;
+    min-width: 30%;
+    padding: 0.2em 2em;
+    text-align: left;
+  }
+  td:nth-child(3) {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 33em) {
+  td {
+    display: block;
+  }
+  tr {
+    padding: 0.5em 0.5em 1em;
+  }
+}
+
+.text-left {
+  text-align: left;
+}
+
+.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
