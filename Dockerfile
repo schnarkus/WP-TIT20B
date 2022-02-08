@@ -1,9 +1,9 @@
 FROM node:12-alpine
-RUN git https://github.com/schnarkus/WP-TIT20B.git
+RUN apk add --no-cache git
 WORKDIR /app
-COPY package.json yarn.lock ./
+RUN git clone https://github.com/schnarkus/WP-TIT20B.git /app/data
+WORKDIR /app/data
 RUN yarn install 
-COPY . .
 
 EXPOSE 8080
 CMD [ "yarn", "run", "start" ]
