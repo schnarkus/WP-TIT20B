@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>
+    <% if(main == "index.ejs"){ %> HardwareVergleich46 <% }  %>
+    <% if(main == "monitore.ejs"){ %> Monitore <% }  %>
+    <% if(main == "grafikkarten.ejs"){ %> Grafikkarten <% }  %>
+    <% if(main == "prozessoren.ejs"){ %> Prozessoren <% }  %>
+    <% if(main == "peripherie.ejs"){ %> Peripherie <% }  %>
+    <% if(main == "kontakt.ejs"){ %> Kontakt <% }  %>
+    <% if(main == "impressum.ejs"){ %> Impressum <% }  %>
+    </title>
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="item1">
+    <header>
+      <div class="topnav" id="myTopnav">
+        <a href="/" <% if(main == "index.ejs"){ %> class="active" <% }  %> >Startseite</a>
+        <a href="monitore" <% if(main == "monitore.ejs"){ %> class="active" <% }  %> >Monitore</a>
+        <a href="grafikkarten" <% if(main == "grafikkarten.ejs"){ %> class="active" <% }  %> >Grafikkarten</a>
+        <a href="prozessoren" <% if(main == "prozessoren.ejs"){ %> class="active" <% }  %> >Prozessoren</a>
+        <a href="peripherie" <% if(main == "peripherie.ejs"){ %> class="active" <% }  %> >Peripherie</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"
+          ><i class="fa fa-bars"></i
+        ></a>
+      </div>
+    </header>
+    </div>
+    <%- include(main) -%>
+    <div class="item5">
+      <p>
+        <a href="kontakt">Kontakt</a>
+        <a href="impressum">Impressum</a>
+      </p>
+      <p>© 2022 HardwareVergleich46</p>
+    </div>
+    </div>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
