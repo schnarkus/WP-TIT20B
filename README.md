@@ -9,3 +9,16 @@ Im Zuge der Vorlesung „Webprogrammierung“ soll im Rahmen einer Projektarbeit
 Neben dem Informieren über Computerhardware soll es für NutzerInnen möglich sein mit den ShopbetreiberInnen Kontakt aufzunehmen, um beispielsweise Fragen zu Produkten zu stellen oder Feedback zum Shop zu geben. Des Weiteren sollen in einem Impressum Informationen über die ShopbetreiberInnen hinterlegt sein.
 
 Ziel ist es nach und nach so viele Funktionen zu implementieren, so dass am Ende ein funktionsfähiger Shop für Computerhardware bereitgestellt werden kann.
+
+
+## Build Container
+
+docker build -t hardwarevergleich46-node .
+
+## Start Container
+
+docker run -d -p 8080:8080 hardwarevergleich46-node
+
+## Adresse
+
+http://localhost:8080/
