@@ -60,6 +60,7 @@ body {
   border-radius: 1rem;
   background-color: #333;
   overflow: hidden;
+  margin: 2rem;
 }
 
 .topnav a {
@@ -117,19 +118,68 @@ fieldset {
   border-radius: 1rem;
 }
 
-input {
-  border-radius: 1rem;
-  font-family: inherit;
-  padding: 0.2rem;
+input[type="text"] {
+  padding: 0.5rem;
+  margin: 1rem;
+  height: 1rem;
 }
 
 .button {
-  border-radius: 1rem;
-  transition-duration: 0.4s;
+  background-color: #0095ff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
+    sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px 0.8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
 }
 
-.button:hover {
-  background-color: #007af3;
+.button:hover,
+.button:focus {
+  background-color: #07c;
+}
+
+.button:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+}
+
+.button:active {
+  background-color: #0064bd;
+  box-shadow: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 1rem;
+  padding: 0;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #555;
   color: white;
 }
 

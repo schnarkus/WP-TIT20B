@@ -17,12 +17,24 @@
     <% if(main == "peripherie.ejs"){ %> Peripherie <% }  %>
     <% if(main == "kontakt.ejs"){ %> Kontakt <% }  %>
     <% if(main == "impressum.ejs"){ %> Impressum <% }  %>
+    <% if(main == "favoriten.ejs"){ %> Favoriten <% }  %>
+    <% if(main == "meistbesucht.ejs"){ %> Meistbesucht <% }  %>
     </title>
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
   </head>
   <body>
+    <%var account%>
     <div class="grid-container">
       <div class="item1">
+          <% if(account){ %>
+            <p>Hallo, Sie sind angemeldet als: <%=account[0]%> </p>
+          <% } else{ %>  
+            <form method="POST" action="/login">
+              <label for="username">Username:</label>
+              <input name="username" type="text" size="15" maxlength="15" />
+              <input type="submit" class="button" value="Einloggen" />
+            </form>
+          <% } %>
     <header>
       <div class="topnav" id="myTopnav">
         <a href="/" <% if(main == "index.ejs"){ %> class="active" <% }  %> >Startseite</a>
@@ -30,6 +42,9 @@
         <a href="grafikkarten" <% if(main == "grafikkarten.ejs"){ %> class="active" <% }  %> >Grafikkarten</a>
         <a href="prozessoren" <% if(main == "prozessoren.ejs"){ %> class="active" <% }  %> >Prozessoren</a>
         <a href="peripherie" <% if(main == "peripherie.ejs"){ %> class="active" <% }  %> >Peripherie</a>
+        <a href="favoriten" <% if(main == "favoriten.ejs"){ %> class="active" <% }  %> >Meine Favoriten</a>
+        <a href="meistbesucht" <% if(main == "meistbesucht.ejs"){ %> class="active" <% }  %> >Meistbesucht</a>
+        <a href="meinekommentare" <% if(main == "meinekommentare.ejs"){ %> class="active" <% }  %> >Meine Kommentare</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()"
           ><i class="fa fa-bars"></i
         ></a>
