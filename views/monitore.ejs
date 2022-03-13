@@ -24,11 +24,34 @@
           <td>60Hz</td>
           <td>24 Zoll</td>
           <td>158,99€</td>
-          <td><button type="button" class="button">Zu Favoriten hinzufügen</button></td>
+          <td>
+          <% if(account && account[2].has("Samsung S24F356")){ %>
+            <form method="POST" action="/favoritEntfernen">
+              <input name="artikel" type="hidden" value="Samsung S24F356"/>
+              <button type="submit" class="button">Von Favoriten entfernen</button>
+              </form>
+          <% } else{ %>  
+              <form method="POST" action="/favoritHinzufuegen">
+              <input name="artikel" type="hidden" value="Samsung S24F356"/>
+              <button type="submit" class="button">Zu Favoriten hinzufügen</button>
+              </form>
+          <% } %>
+          </td>
           <form method="POST" action="/kommentarHinzufuegen">
-          <input name="artikel" type="hidden" value="Samsung S24F356"/>
-          <td><input id="a" name="kommentar" type="text" size="80" maxlength="200" /><output name="kommentare" for="a">Test</output></td>
-          <td><button type="submit" class="button">Kommentar hinzufügen</button></td>
+          <td>
+            <input name="artikel" type="hidden" value="Samsung S24F356"/>
+            <input id="a" name="kommentar" type="text" size="80" maxlength="200" />
+            <div class="commentcontainer">
+            <%var kommentare = alleKommentare.get("Samsung S24F356")%>
+            <% for(var i = 0; i < kommentare.length; i++ ){ %>
+              <p><%=kommentare[i][0]%>: <%=kommentare[i][1]%><p>
+              <p></p>
+            <% } %>
+            </div>
+          </td>
+          <td>
+            <button type="submit" class="button">Kommentar hinzufügen</button>
+          </td>
           </form>
         </tr>
         <tr>
