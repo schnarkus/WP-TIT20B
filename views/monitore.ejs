@@ -42,10 +42,10 @@
             <input name="artikel" type="hidden" value="Samsung S24F356"/>
             <input id="a" name="kommentar" type="text" size="80" maxlength="200" />
             <div class="commentcontainer">
-            <%var kommentare = alleKommentare.get("Samsung S24F356")%>
+            <%var kommentare = alleKommentare.get("Samsung S24F356") ?? []%>
             <% for(var i = 0; i < kommentare.length; i++ ){ %>
               <p><%=kommentare[i][0]%>: <%=kommentare[i][1]%><p>
-              <p></p>
+            <% } %>
             <% } %>
             </div>
           </td>
