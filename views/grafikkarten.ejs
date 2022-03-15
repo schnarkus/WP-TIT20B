@@ -11,14 +11,14 @@
           <tr>
             <td>
               <a
-                href=""
+                href="https://www.caseking.de/MSI-GeForce-RTX-3060-Ti-Gaming-Z-Trio-8G-LHR-8192-MB-GDDR6-GCMC-294.html?tplview=desktop"
                 >MSI RTX 3060 Ti</a
               >
             </td>
             <td>
               <img
                 height="100"
-                src=""
+                src="https://media.nbb-cdn.de/images/products/680000/686775/GV-N306TEAGLEOC-8GD-CandB.png?size=2800"
               />
             </td>
             <td>1410MHz, Boost: 1845MHz</td>
@@ -46,11 +46,9 @@
                   <div>
                     <p class="commentsheading">Kommentare:</p>
                     <div class="commentbox">
-                      <%var kommentare = alleKommentare.get("MSI RTX 3060 Ti")%>
-                      <% if(kommentare){ %>
-                        <% for(var i = 0; i < kommentare.length; i++ ){ %>
-                          <p><%=kommentare[i][0]%>: <%=kommentare[i][1]%><p>
-                        <% } %>
+                      <%var kommentare = alleKommentare.get("MSI RTX 3060 Ti") ?? []%>
+                      <% for(var i = 0; i < kommentare.length; i++ ){ %>
+                        <p><%=kommentare[i][0]%>: <%=kommentare[i][1]%><p>
                       <% } %>
                     </div>
                   </div>
@@ -96,11 +94,9 @@
                   <div>
                     <p class="commentsheading">Kommentare:</p>
                     <div class="commentbox">
-                      <%var kommentare = alleKommentare.get("GIGABYTE RTX 3070")%>
-                      <% if(kommentare){ %>
-                        <% for(var i = 0; i < kommentare.length; i++ ){ %>
-                          <p><%=kommentare[i][0]%>: <%=kommentare[i][1]%><p>
-                        <% } %>
+                      <%var kommentare = alleKommentare.get("GIGABYTE RTX 3070") ?? []%>
+                      <% for(var i = 0; i < kommentare.length; i++ ){ %>
+                        <p><%=kommentare[i][0]%>: <%=kommentare[i][1]%><p>
                       <% } %>
                     </div>
                   </div>
@@ -111,7 +107,7 @@
           <tr>
             <td>
               <a
-                href=""
+                href="https://www.caseking.de/Gigabyte-GeForce-RTX-3080-Gaming-OC-10G-LHR-10240-MB-GDDR6X-GCGB-403.html?flxSmartSuggest=1"
                 >GIGABYTE GeForce RTX 3080</a
               >
             </td>
@@ -146,11 +142,9 @@
                   <div>
                     <p class="commentsheading">Kommentare:</p>
                     <div class="commentbox">
-                      <%var kommentare = alleKommentare.get("GIGABYTE GeForce RTX 3080")%>
-                      <% if(kommentare){ %>
-                        <% for(var i = 0; i < kommentare.length; i++ ){ %>
-                          <p><%=kommentare[i][0]%>: <%=kommentare[i][1]%><p>
-                        <% } %>
+                      <%var kommentare = alleKommentare.get("GIGABYTE GeForce RTX 3080") ?? []%>
+                      <% for(var i = 0; i < kommentare.length; i++ ){ %>
+                        <p><%=kommentare[i][0]%>: <%=kommentare[i][1]%><p>
                       <% } %>
                     </div>
                   </div>

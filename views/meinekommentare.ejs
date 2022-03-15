@@ -4,7 +4,7 @@
 <legend><b>Kommentare</b></legend>
 <% if(account){ %>
   <% for(var artikel of Array.from(account[1].keys())){ %>
-    <p><%=artikel%>:</p>
+    <p><b><%=artikel%>:</b></p>
     <% for(var kommentar of account[1].get(artikel)){ %>
       <p><%=kommentar%></p>
     <% } %>
