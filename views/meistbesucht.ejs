@@ -1,0 +1,13 @@
+<div class="item3">
+  <section>
+  <fieldset>
+  <legend><b>Meistbesucht</b></legend>
+  <% if(account){ %>
+    <% for(var inhalt of Array.from(account[3].keys())){ %>
+      <p><%=inhalt%>: <%=account[3].get(inhalt)%></p>
+    <% } %>
+  <% } else{ %>  
+    <p>Sie sind nicht angemeldet!</p>
+  <% } %>
+  </fieldset>
+  </section>

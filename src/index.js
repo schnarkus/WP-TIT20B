@@ -177,8 +177,12 @@ app.post("/kommentarHinzufuegen", (req, res) => {
     alleKommentare.set(artikelName, []);
   }
 
+  if (!account[1].has(artikelName)) {
+    account[1].set(artikelName, []);
+  }
+
   alleKommentare.get(artikelName).push([account[0], kommentar]);
-  account[1].set(artikelName, kommentar);
+  account[1].get(artikelName).push(kommentar);
   res.redirect("back");
 });
 

@@ -1,0 +1,13 @@
+<div class="item3">
+  <section>
+  <fieldset>
+  <legend><b>Favoriten</b></legend>
+  <% if(account){ %>
+    <% for(var artikel of Array.from(account[2])){ %>
+      <p><%=artikel%></p>
+    <% } %>
+  <% } else{ %>  
+    <p>Sie sind nicht angemeldet!</p>
+  <% } %>
+  </fieldset>
+  </section>

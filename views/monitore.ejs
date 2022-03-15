@@ -10,7 +10,7 @@
         <tr>
           <td>
             <a
-              href="https://www.electronis.de/index.php?page=article&ID=318820&aid=128"
+              href="https://www.caseking.de/samsung-s24f356-59-8-cm-23-5-zoll-pls-hdmi-vga-tfss-149.html?sPartner=999&gclid=CjwKCAjw8sCRBhA6EiwA6_IF4UdMDGnszU-n_04I1dPrfL4NjLelnzTQ9myw6qi2HlQfiszP1jbc1xoCjYoQAvD_BwE"
               >Samsung S24F356</a
             >
           </td>
@@ -23,7 +23,7 @@
           <td>1920x1080p</td>
           <td>60Hz</td>
           <td>24 Zoll</td>
-          <td>158,99€</td>
+          <td>129,90€</td>
           <td>
           <% if(account && account[2].has("Samsung S24F356")){ %>
             <form method="POST" action="/favoritEntfernen">
@@ -39,17 +39,20 @@
           </td>
           <form method="POST" action="/kommentarHinzufuegen">
           <td>
-            <input name="artikel" type="hidden" value="Samsung S24F356"/>
-            <input id="a" name="kommentar" type="text" size="80" maxlength="200" />
             <div class="commentcontainer">
-            <%var kommentare = alleKommentare.get("Samsung S24F356") ?? []%>
-            <% for(var i = 0; i < kommentare.length; i++ ){ %>
-              <p><%=kommentare[i][0]%>: <%=kommentare[i][1]%><p>
-            <% } %>
+              <input name="artikel" type="hidden" value="Samsung S24F356"/>
+              <input name="kommentar" type="text" maxlength="200" />
+              <button type="submit" class="button commentbutton">Kommentar hinzufügen</button>
+              <div>
+                <p class="commentsheading">Kommentare:</p>
+                <div class="commentbox">
+                  <%var kommentare = alleKommentare.get("Samsung S24F356") ?? []%>
+                  <% for(var i = 0; i < kommentare.length; i++ ){ %>
+                    <p><%=kommentare[i][0]%>: <%=kommentare[i][1]%><p>
+                  <% } %>
+                </div>
+              </div>
             </div>
-          </td>
-          <td>
-            <button type="submit" class="button">Kommentar hinzufügen</button>
           </td>
           </form>
         </tr>
@@ -70,8 +73,37 @@
           <td>144Hz</td>
           <td>27 Zoll</td>
           <td>449,99€</td>
-          <td><button type="button" class="button">Zu Favoriten hinzufügen</button></td>
-          <td><button type="button" class="button">Kommentar hinzufügen</button></td>
+          <td>
+            <% if(account && account[2].has("LC-Power LC-M27-QHD-144-C")){ %>
+              <form method="POST" action="/favoritEntfernen">
+                <input name="artikel" type="hidden" value="LC-Power LC-M27-QHD-144-C"/>
+                <button type="submit" class="button">Von Favoriten entfernen</button>
+                </form>
+            <% } else{ %>
+                <form method="POST" action="/favoritHinzufuegen">
+                <input name="artikel" type="hidden" value="LC-Power LC-M27-QHD-144-C"/>
+                <button type="submit" class="button">Zu Favoriten hinzufügen</button>
+                </form>
+            <% } %>
+            </td>
+            <form method="POST" action="/kommentarHinzufuegen">
+            <td>
+              <div class="commentcontainer">
+                <input name="artikel" type="hidden" value="LC-Power LC-M27-QHD-144-C"/>
+                <input name="kommentar" type="text" maxlength="200" />
+                <button type="submit" class="button commentbutton">Kommentar hinzufügen</button>
+                <div>
+                  <p class="commentsheading">Kommentare:</p>
+                  <div class="commentbox">
+                    <%var kommentare = alleKommentare.get("LC-Power LC-M27-QHD-144-C") ?? []%>
+                    <% for(var i = 0; i < kommentare.length; i++ ){ %>
+                      <p><%=kommentare[i][0]%>: <%=kommentare[i][1]%><p>
+                    <% } %>
+                  </div>
+                </div>
+              </div>
+            </td>
+            </form>
         </tr>
         <tr>
           <td>
@@ -90,8 +122,37 @@
           <td>170Hz</td>
           <td>27 Zoll</td>
           <td>349,00€</td>
-          <td><button type="button" class="button">Zu Favoriten hinzufügen</button></td>
-          <td><button type="button" class="button">Kommentar hinzufügen</button></td>
+          <td>
+            <% if(account && account[2].has("GIGABYTE M27Q")){ %>
+              <form method="POST" action="/favoritEntfernen">
+                <input name="artikel" type="hidden" value="GIGABYTE M27Q"/>
+                <button type="submit" class="button">Von Favoriten entfernen</button>
+                </form>
+            <% } else{ %>
+                <form method="POST" action="/favoritHinzufuegen">
+                <input name="artikel" type="hidden" value="GIGABYTE M27Q"/>
+                <button type="submit" class="button">Zu Favoriten hinzufügen</button>
+                </form>
+            <% } %>
+            </td>
+            <form method="POST" action="/kommentarHinzufuegen">
+            <td>
+              <div class="commentcontainer">
+                <input name="artikel" type="hidden" value="GIGABYTE M27Q"/>
+                <input name="kommentar" type="text" maxlength="200" />
+                <button type="submit" class="button commentbutton">Kommentar hinzufügen</button>
+                <div>
+                  <p class="commentsheading">Kommentare:</p>
+                  <div class="commentbox">
+                    <%var kommentare = alleKommentare.get("GIGABYTE M27Q") ?? []%>
+                    <% for(var i = 0; i < kommentare.length; i++ ){ %>
+                      <p><%=kommentare[i][0]%>: <%=kommentare[i][1]%><p>
+                    <% } %>
+                  </div>
+                </div>
+              </div>
+            </td>
+            </form>
         </tr>
       </table>
     </fieldset>
