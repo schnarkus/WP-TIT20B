@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:17-alpine
 RUN apk add --no-cache git
 WORKDIR /app
 RUN git clone https://github.com/schnarkus/WP-TIT20B.git /app/data
