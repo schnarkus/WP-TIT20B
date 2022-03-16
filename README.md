@@ -1,6 +1,6 @@
 # WP-TIT20B
 
-Projektarbeit Webprogrammierung – HardwareVergleich46
+## Projektarbeit Webprogrammierung – HardwareVergleich46
 
 von Dario Neumann, Luise Frerichs, Tempest Glodowski, Marc Hoppe, Marko Jahn und Markus Simianer
 
@@ -22,7 +22,7 @@ HardwareVergleich46 trackt mittels Cookies die Seitenaufrufe von Usern und speic
 
 ### Kommentare
 
-Kommentare ermöglichen es den Usern Erfahrungen und Empfehlungen zu einzelnen Produkten zu teilen. Dazu kann der Text in das Inputfeld zum jeweiligen Produkt geschrieben werden und mit dem Button "Kommentar hinzufügen" in den Textbereich darunter geschrieben werden (für alle sichtbar).
+Kommentare ermöglichen es den Usern, Erfahrungen und Empfehlungen zu einzelnen Produkten zu teilen. Dazu kann der Text in das Inputfeld zum jeweiligen Produkt geschrieben werden und mit dem Button "Kommentar hinzufügen" in den Textbereich darunter geschrieben werden (für alle sichtbar).
 
 ## Dokumentation Docker
 
@@ -47,4 +47,4 @@ Im Bereich Hosting des Projektes wurde eine Umstrukturierung vorgenommen. Die We
 ### Projektarbeit: interaktive Website
 
 Zunächst wurden zwei Maps ("accounts" und "alleKommentare") zum Speichern der neuen Cookie-Daten in "index.js" hinzugefügt. Ein Account in "accounts" beinhaltet ein Array mit den Inhalten: Username, eine Map für die eigenen Kommentare, ein Set für die eigenen Favoriten und eine Map für die meistbesuchten Seiten. "alleKommentare" enthält pro Artikel mehrere Arrays mit je dem Usernamen und dem Kommentar zum jeweiligen Artikel. Anschließend wurde der Login-Handler hinzugefügt, welcher über ein Form-Element in der "template.ejs" aufgerufen wird. Dort wird der oben im Textfeld eingegebene Name abgerufen und überprüft, ob dieser schon in "accounts" existiert. Falls nicht, wird ein neuer Account angelegt und die Inhaltszähler mit 0 initialisiert, sowie der Cookie gesetzt. Falls der Username bereits existiert, passiert nichts. Immer wenn ein HTTP-Get-Handler angesprochen wird, wird der Account des Absenders bestimmt und der entsprechende Inhaltszähler um 1 erhöht. Zudem wurde ein Kommentar-Handler hinzugefügt, welcher über mehrere Forms in den HTML-Seiten aufgerufen wird. Er wird über den Cookie des Absende-Accounts bestimmt, welchem der Kommentar zugeordnet wird. Außerdem wird auch der Kommentar in die "alleKommentare"-Collection hinzugefügt. Darüber hinaus wurden Favorit-Handler implementiert, welche über mehrere Forms in den HTML-Seiten aufgerufen werden können. Beide bestimmen den Account des Absenders und fügen Artikel hinzu / entfernen Artikel aus dem Favoriten-Set.
-In der "template.ejs"-Datei wurden die zwei Variablen "account" und "alleKommentare" angelegt. Die Account-Variable bekommt vom HTTP-Get-Handler den Account des Aufrufenden und "alleKommentare" bekommt die Referenz der "alleKommentare"-Collection. Aus diesen zwei Variablen werden in den 3 neuen Views-Dateien und in der "template.ejs" die benötigten Daten abgerufen und iteriert. Dazu wird eine spezielle Syntax genutzt, welche es erlaubt, JavaScript in den HTML-Dokumenten zu verwenden (durch <% und %> gekennzeichnet).
+In der "template.ejs"-Datei wurden die zwei Variablen "account" und "alleKommentare" angelegt. Die Account-Variable bekommt vom HTTP-Get-Handler den Account des Aufrufenden und "alleKommentare" bekommt die Referenz der "alleKommentare"-Collection. Aus diesen zwei Variablen werden in den drei neuen Views-Dateien und in der "template.ejs" die benötigten Daten abgerufen und iteriert. Dazu wird eine spezielle Syntax genutzt, welche es erlaubt, JavaScript in den HTML-Dokumenten zu verwenden (durch <% und %> gekennzeichnet).
