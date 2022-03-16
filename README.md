@@ -55,6 +55,8 @@ Index.js:
 - Kommentar-Handler hinzugefügt, welcher über mehrere Forms in den HTML-Seiten aufgerufen wird. Es wird über den Cookie der Account des Absenders bestimmt und diesem der Kommentar hinzugefügt. Außerdem wird auch der Kommentar in die alleKommentare Collection hinzugefügt.
 - Favorit-Handler hinzugefügt, welcher über mehrere Forms in den HTML-Seiten aufgerufen werden. Beide bestimmen den Account des Absenders und fügen den Artikel / entfernen den Artikel aus dem Favoriten Set.
 - Jedes mal wenn ein HTTP-Get Handler angesprochen wird, wird der Account des Absenders bestimmt und der entsprechende Inhaltszähler um 1 erhöht.
-  views:
+
+views:
+
 - In der template.ejs wurden zwei Variablen *account *und alleKommentare angelegt. Account bekommt vom HTTP-get Handler den Account des aufrufenden und *alleKommentare *bekommt die Referenz der *alleKommentare *Collection.
 - Aus diesen zwei Variablen werden in den 3 neuen Views und in der template.ejs die benötigten Daten abgerufen und iteriert. Dazu wird eine spezielle Syntax genutzt, welche es erlaubt JavaScript in den HTML-Dokumenten zu verwenden (Durch <% und %> gekennzeichnet)
