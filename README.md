@@ -42,7 +42,7 @@ http://localhost:8080/
 
 ### Node und ejs
 
-Im Bereich Hosting des Projektes wurde eine Umstrukturierung vorgenommen. Die Webseite wird nun mit Node.js gehostet. Dabei werden die Pakete EJS, express und nodemon verwendet. EJS wird verwendet, da ein Template existieren und wir an dieses übergeben welcher Inhalt angezeigt werden soll und EJS kombiniert dann beides. Das Docker-Image wird auf dem Node:17-Alpine-Image aufgebaut und kopiert die "package.json"- und "yarn.lock"-Dateien in das Arbeitsverzeichnis von Alpine, die die zu installierenden Pakete enthalten. yarn installiert anschließend die benötigten Pakete. Zuletzt wird der Port 8080 freigegeben und mit "yarn run start" das Hosting im Container gestartet, sobald der Container aus dem Image heraus erstellt und gestartet wird.
+Die Webseite wird mit Node.js gehostet. Dabei werden die Pakete EJS, express und nodemon verwendet. EJS wird verwendet, da ein Template existieren und wir an dieses übergeben welcher Inhalt angezeigt werden soll und EJS kombiniert dann beides. Das Docker-Image wird auf dem Node:17-Alpine-Image aufgebaut und kopiert die "package.json"- und "yarn.lock"-Dateien in das Arbeitsverzeichnis von Alpine, die die zu installierenden Pakete enthalten. yarn installiert anschließend die benötigten Pakete. Zuletzt wird der Port 8080 freigegeben und mit "yarn run start" das Hosting im Container gestartet, sobald der Container aus dem Image heraus erstellt und gestartet wird.
 
 ### Projektarbeit: interaktive Website
 
