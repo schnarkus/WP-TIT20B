@@ -47,13 +47,14 @@ Im Branch node des Projektes wurde eine Umstrukturierung des Projektes vorgenomm
 ### Projektarbeit: interaktive Website
 
 Index.js:
-● Zwei Maps (accounts und alleKommentare) zum Speichern der Daten in index.js hinzugefügt.
-● ein Account in *accounts *beinhaltet ein Array mit den Inhalten: Username, eine Map für die eigenen Kommentare, ein Set für die eigenen Favoriten und eine map für die meistbesuchten Seiten
-● *alleKommentare *beinhaltet pro Artikel mehrere Arrays mit je dem Usernamen und dem Kommentar zum Artikel
-● Login-Handler hinzugefügt, welcher über ein Form in der template.ejs aufgerufen wird. Dort wird der oben im Textfeld eingegebene Name abgerufen und überprüft, ob dieser schon in *accounts *existiert. Falls nein wird ein neuer account angelegt und die Inhaltszähler mit 0 initialisiert, sowie der Cookie gesetzt. Falls der Username bereits existiert passiert nichts
-● Kommentar-Handler hinzugefügt, welcher über mehrere Forms in den HTML-Seiten aufgerufen wird. Es wird über den Cookie der Account des Absenders bestimmt und diesem der Kommentar hinzugefügt. Außerdem wird auch der Kommentar in die alleKommentare Collection hinzugefügt.
-● Favorit-Handler hinzugefügt, welcher über mehrere Forms in den HTML-Seiten aufgerufen werden. Beide bestimmen den Account des Absenders und fügen den Artikel / entfernen den Artikel aus dem Favoriten Set.
-● Jedes mal wenn ein HTTP-Get Handler angesprochen wird, wird der Account des Absenders bestimmt und der entsprechende Inhaltszähler um 1 erhöht.
-views:
-● In der template.ejs wurden zwei Variablen *account *und alleKommentare angelegt. Account bekommt vom HTTP-get Handler den Account des aufrufenden und *alleKommentare *bekommt die Referenz der *alleKommentare *Collection.
-● Aus diesen zwei Variablen werden in den 3 neuen Views und in der template.ejs die benötigten Daten abgerufen und iteriert. Dazu wird eine spezielle Syntax genutzt, welche es erlaubt JavaScript in den HTML-Dokumenten zu verwenden (Durch <% und %> gekennzeichnet)
+
+- Zwei Maps (accounts und alleKommentare) zum Speichern der Daten in index.js hinzugefügt.
+- ein Account in *accounts *beinhaltet ein Array mit den Inhalten: Username, eine Map für die eigenen Kommentare, ein Set für die eigenen Favoriten und eine map für die meistbesuchten Seiten
+- *alleKommentare *beinhaltet pro Artikel mehrere Arrays mit je dem Usernamen und dem Kommentar zum Artikel
+- Login-Handler hinzugefügt, welcher über ein Form in der template.ejs aufgerufen wird. Dort wird der oben im Textfeld eingegebene Name abgerufen und überprüft, ob dieser schon in *accounts *existiert. Falls nein wird ein neuer account angelegt und die Inhaltszähler mit 0 initialisiert, sowie der Cookie gesetzt. Falls der Username bereits existiert passiert nichts
+- Kommentar-Handler hinzugefügt, welcher über mehrere Forms in den HTML-Seiten aufgerufen wird. Es wird über den Cookie der Account des Absenders bestimmt und diesem der Kommentar hinzugefügt. Außerdem wird auch der Kommentar in die alleKommentare Collection hinzugefügt.
+- Favorit-Handler hinzugefügt, welcher über mehrere Forms in den HTML-Seiten aufgerufen werden. Beide bestimmen den Account des Absenders und fügen den Artikel / entfernen den Artikel aus dem Favoriten Set.
+- Jedes mal wenn ein HTTP-Get Handler angesprochen wird, wird der Account des Absenders bestimmt und der entsprechende Inhaltszähler um 1 erhöht.
+  views:
+- In der template.ejs wurden zwei Variablen *account *und alleKommentare angelegt. Account bekommt vom HTTP-get Handler den Account des aufrufenden und *alleKommentare *bekommt die Referenz der *alleKommentare *Collection.
+- Aus diesen zwei Variablen werden in den 3 neuen Views und in der template.ejs die benötigten Daten abgerufen und iteriert. Dazu wird eine spezielle Syntax genutzt, welche es erlaubt JavaScript in den HTML-Dokumenten zu verwenden (Durch <% und %> gekennzeichnet)
